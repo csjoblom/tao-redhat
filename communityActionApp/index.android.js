@@ -11,7 +11,7 @@ import React, {
   View
 } from 'react-native';
 
-class redhatMobile extends Component {
+class communityActionApp extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -48,4 +48,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('redhatMobile', () => redhatMobile);
+AppRegistry.registerComponent('communityActionApp', () => communityActionApp);
