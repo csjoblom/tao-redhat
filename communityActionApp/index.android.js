@@ -7,31 +7,20 @@ import React, {
   AppRegistry,
   Button,
   Component,
+  Navigator,
   StyleSheet,
   Text,
   View
 } from 'react-native';
 
-const issueTypes = [
-  'FIGHT',
-  'VAGRANT',
-  'MEET&GREET',
-  'VANDALISM',
-  'PATROL',
-  'WALK OUT',
-  'GRAFFITI',
-  'ASSISTANCE',
-  'OTHER'
-];
-
-class communityActionApp extends Component {
+var communityActionApp = React.createClass({
   getInitialState() {
     return {
-      issueTypes:issueTypes
+      reportCreated: Date.now()
     };
-  }
+  },
   render() {
-    return (
+    var layout = (
       <View style={styles.container}>
           <Text style={styles.issueType}>
             Issue Type #1
@@ -63,8 +52,9 @@ class communityActionApp extends Component {
 
       </View>
     );
+    return layout;
   }
-}
+});
 
 const styles = StyleSheet.create({
   container: {
@@ -82,6 +72,17 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     backgroundColor: '#f62745',
+    color: '#ffffff',
+    padding: 10,
+    marginTop: 10,
+    marginRight: 10,
+    textAlign: 'center',
+    justifyContent: 'center'
+  },
+  issueTypeClicked: {
+    width: 80,
+    height: 80,
+    backgroundColor: '#000000',
     color: '#ffffff',
     padding: 10,
     marginTop: 10,
