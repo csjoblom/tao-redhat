@@ -51,7 +51,9 @@ $results = $wpdb->get_var( 'SELECT COUNT(id) AS NUM FROM wp_red_caps_data WHERE 
 echo 'Total Incidents: '. $results;
 
 
-echo '<br><hr>API KEY: '.$stored_api_key.'<br><br><a href="/wp-admin/options-general.php?page=wp_red_caps&key_gen=y">Create a new API key</a>';
+echo '<br><br><hr>
+Below is the API KEY that allows the mobile application to connect to this WordPress API. Should you need to generate a new key, all mobile applications currently in use would need to be udated.<br><br>
+API KEY: '.$stored_api_key.'<br><br><a href="/wp-admin/options-general.php?page=wp_red_caps&key_gen=y">Create a new API key</a>';
 
 }
 
