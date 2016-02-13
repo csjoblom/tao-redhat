@@ -103,7 +103,7 @@ $wpdb->insert(
 		)
 	);
 
-  $output = array('r_id'=>$reporter_id);
+  $output = array('incident'=>'added');
   return $output;
 
 
