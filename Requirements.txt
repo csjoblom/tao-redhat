@@ -33,3 +33,9 @@ Goals:
   2: A public website to get information to the public faster
   3: Reporting tools to help analyze reports to identify trends
 */
+
+* Instead of mongo - dynamodb
+* Second AWS instance for node api
+* AWS Lambda - check out free offering
+
+

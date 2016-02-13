@@ -5,22 +5,62 @@
 'use strict';
 import React, {
   AppRegistry,
+  Button,
   Component,
   StyleSheet,
   Text,
   View
 } from 'react-native';
 
+const issueTypes = [
+  'FIGHT',
+  'VAGRANT',
+  'MEET&GREET',
+  'VANDALISM',
+  'PATROL',
+  'WALK OUT',
+  'GRAFFITI',
+  'ASSISTANCE',
+  'OTHER'
+];
+
 class communityActionApp extends Component {
+  getInitialState() {
+    return {
+      issueTypes:issueTypes
+    };
+  }
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Community Action
-        </Text>
-        <Text style={styles.instructions}>
-          Shake or press menu button for dev menu
-        </Text>
+          <Text style={styles.issueType}>
+            Issue Type #1
+          </Text>
+          <Text style={styles.issueType}>
+            Issue Type #1
+          </Text>
+          <Text style={styles.issueType}>
+            Issue Type #1
+          </Text>
+          <Text style={styles.issueType}>
+            Issue Type #1
+          </Text>
+          <Text style={styles.issueType}>
+            Issue Type #1
+          </Text>
+          <Text style={styles.issueType}>
+            Issue Type #1
+          </Text>
+          <Text style={styles.issueType}>
+            Issue Type #1
+          </Text>
+          <Text style={styles.issueType}>
+            Issue Type #1
+          </Text>
+          <Text style={styles.issueType}>
+            Issue Type #1
+          </Text>
+
       </View>
     );
   }
@@ -29,20 +69,26 @@ class communityActionApp extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
+    paddingTop: 150,
+    paddingLeft: 45,
+    paddingRight: 45
   },
-  welcome: {
-    fontSize: 20,
+  issueType: {
+    width: 80,
+    height: 80,
+    backgroundColor: '#f62745',
+    color: '#ffffff',
+    padding: 10,
+    marginTop: 10,
+    marginRight: 10,
     textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    justifyContent: 'center'
+  }
 });
 
 AppRegistry.registerComponent('communityActionApp', () => communityActionApp);

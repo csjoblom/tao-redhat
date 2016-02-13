@@ -12,6 +12,7 @@ import React, {
 } from 'react-native';
 
 class communityActionApp extends Component {
+  debugger;
   render() {
     return (
       <View style={styles.container}>
