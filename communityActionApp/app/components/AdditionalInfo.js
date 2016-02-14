@@ -32,7 +32,12 @@ class AdditionalInfo extends React.Component{
                 Aid
               </Text>
             </TouchableHighlight>
-            <TextInput style={styles.emailInput} />
+            <View style={styles.emailContainer}>
+              <Text style={styles.emailLabel}>
+              Email
+              </Text>
+              <TextInput style={styles.emailInput} />
+            </View>
           </View>
           <View style={styles.row}>
             <TextInput style={styles.locationNameInput} />
@@ -91,28 +96,39 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'center',
-    justifyContent: 'center',
     marginLeft: 24,
     marginRight: 24,
     paddingTop: 24,
   },
   issueButton: {
-    width: 100,
-    height: 100,
-    justifyContent: 'center',
+    width: 50,
+    height: 50,
     backgroundColor: '#f62745',
-    padding: 16,
+    padding: 8,
     borderWidth: 1,
     borderColor: '#ffffff'
   },
   issueType: {
     color: '#ffffff',
     textAlign: 'center',
-    fontSize: 24,
+    fontSize: 18,
     fontWeight: 'bold'
+  },
+  emailContainer: {
+    marginLeft: 16
+  },
+  emailLabel: {
+    marginTop: 16,
+    marginBottom: 14,
+    fontWeight: 'bold',
+    fontSize: 14
   },
   emailInput: {
 
+    width: 206,
+    height: 50,
+    borderColor: 'gray',
+    borderWidth: 1
   },
   locationNameInput: {
 
