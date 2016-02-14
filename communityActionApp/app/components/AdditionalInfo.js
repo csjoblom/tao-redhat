@@ -39,20 +39,22 @@ class AdditionalInfo extends React.Component{
         var layout = (
         <View style={styles.container}>
           <View style={styles.row}>
-            <TouchableHighlight
-              underlayColor={'#B1B8B9'}
-              style={styles.issueButton}
-              value={'aid'}
-              onPress={this.handleSubmit.bind(this)}>
-              <Text style={styles.issueType}>
-                Aid
-              </Text>
-            </TouchableHighlight>
-            <View style={styles.emailContainer}>
-              <Text style={styles.emailLabel}>
-              Email
-              </Text>
-              <TextInput style={styles.emailInput} />
+          <View style={styles.issueContainer}>
+              <TouchableHighlight
+                underlayColor={'#B1B8B9'}
+                style={styles.issueButton}
+                value={'aid'}
+                onPress={this.handleSubmit.bind(this)}>
+                <Text style={styles.issueType}>
+                  Aid
+                </Text>
+              </TouchableHighlight>
+              <View style={styles.emailContainer}>
+                <Text style={styles.emailLabel}>
+                Email
+                </Text>
+                <TextInput style={styles.emailInput} />
+              </View>
             </View>
           </View>
           <View style={styles.row}>
@@ -105,15 +107,17 @@ class AdditionalInfo extends React.Component{
             </View>
           </View>
           <View style={styles.row}>
-            <TouchableHighlight
-              underlayColor={'#B1B8B9'}
-              style={styles.reportSubmitButton}
-              value={true}
-              onPress={this.handleSubmit.bind(this)}>
-              <Text style={styles.reportSubmitButtonType}>
-                Submit
-              </Text>
-            </TouchableHighlight>
+            <View style={styles.reportSubmitButtonContainer}>
+              <TouchableHighlight
+                underlayColor={'#B1B8B9'}
+                style={styles.reportSubmitButton}
+                value={true}
+                onPress={this.handleSubmit.bind(this)}>
+                <Text style={styles.reportSubmitButtonType}>
+                  Submit
+                </Text>
+              </TouchableHighlight>
+            </View>
           </View>
 
         </View>
@@ -128,6 +132,15 @@ const styles = StyleSheet.create({
     paddingTop: 60,
   },
   row: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    marginLeft: 24,
+    marginRight: 24,
+    paddingTop: 24,
+  },
+  issueContainer: {
     flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -160,13 +173,19 @@ const styles = StyleSheet.create({
     fontSize: 14
   },
   emailInput: {
-    width: 206,
+    width: 190,
     height: 50,
     borderColor: 'gray',
     borderWidth: 1
   },
   locationContainer:{
-
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    marginLeft: 24,
+    marginRight: 24,
+    paddingTop: 24,
   },
   locationNameLabel: {
     marginTop: 16,
@@ -193,7 +212,13 @@ const styles = StyleSheet.create({
     borderWidth: 1
   },
   policeContainer: {
-
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    marginLeft: 24,
+    marginRight: 24,
+    paddingTop: 24,
   },
   policeLabel: {
     marginTop: 16,
@@ -210,6 +235,15 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ffffff'
   },
+  additionalNotesContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    marginLeft: 24,
+    marginRight: 24,
+    paddingTop: 24,
+  },
   additionalNotesLabel: {
     marginTop: 16,
     marginBottom: 14,
@@ -221,6 +255,15 @@ const styles = StyleSheet.create({
     height: 250,
     borderColor: 'gray',
     borderWidth: 1
+  },
+  reportSubmitButtonContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    marginLeft: 24,
+    marginRight: 24,
+    paddingTop: 24,
   },
   reportSubmitButton: {
     width: 320,

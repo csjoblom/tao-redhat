@@ -18,7 +18,7 @@ class SnapPicture extends React.Component{
           <View style={styles.successContainer}>
             <View style={styles.successHeader}>
               <Text style={styles.successType}>
-                Report Submitted Successfully
+                Report{\n}Submitted{\n}Successfully
               </Text>
             </View>
             <TouchableHighlight
@@ -59,13 +59,14 @@ const styles = StyleSheet.create({
     fontSize: 48,
   },
   successButton: {
-    width: 100,
+    width: 320,
     height: 100,
     justifyContent: 'center',
     backgroundColor: '#f62745',
     padding: 16,
     borderWidth: 1,
-    borderColor: '#ffffff'
+    borderColor: '#ffffff',
+    marginBottom: 48,
   },
   issueType: {
     color: '#ffffff',
