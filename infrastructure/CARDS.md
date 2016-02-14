@@ -22,3 +22,11 @@ Four days worth of drive snapshots are stored in case issues are not immediately
 Since the data in mysql is the real value of this system the DR is more redundant. Versioning is enabled on the S3 bucket. So each day when the backup is overwritten the previous version is save. As a measure of cost control these versions are transitioned to the less expensive "reduced redundancy" tier after 30 days and deletely completely after 90 days.
 
 Secure is done through least privileges. Permissions for the server to access the AWS account are set via role. This allows fine-grained security rules without any secure AWS assets (for the AWS account being stored on the server). The server has only been granted access to those parts of the AWS that are needed for backup and DR.
+
+Specifically the server is able to
+
+ - see all other servers on the account
+ - write to the backup folder on s3
+ - create new clones of drives
+ - see existing drive clones
+ - delete drive clones
