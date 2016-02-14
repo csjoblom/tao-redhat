@@ -65,6 +65,24 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 11,
     fontWeight: 'bold'
+  },
+  emailInput: {
+
+  },
+  locationNameInput: {
+
+  },
+  locationAddressInput: {
+
+  },
+  policeButton: {
+
+  },
+  additionalNotesInput: {
+
+  },
+  reportSubmitButton: {
+    
   }
 
 });
