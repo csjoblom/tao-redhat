@@ -17,7 +17,7 @@ class Impact extends React.Component{
         report: report
       });
       this.props.navigator.push({
-        title: 'Snap a Picture',
+        title: 'Snap',
         component: SnapPicture,
         passProps: {report: this.state.report}
       });

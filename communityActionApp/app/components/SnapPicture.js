@@ -2,6 +2,7 @@ var React = require('react-native');
 var AdditionalInfo = require('./AdditionalInfo');
 
 var {
+    Image,
     TouchableHighlight,
     Text,
     StyleSheet,
@@ -29,8 +30,8 @@ class SnapPicture extends React.Component{
         var layout = (
         <View style={styles.container}>
             <View style={styles.logoContainer}>
-              <View style={styles.logo}>
-              </View>
+              <Image style={styles.logo}
+                source={require('../assets/cameralargered.png')} />
             </View>
             <View style={styles.snapContainer}>
               <TouchableHighlight
@@ -61,14 +62,13 @@ class SnapPicture extends React.Component{
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 120,
+    paddingTop: 200,
   },
   snapContainer: {
     flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    alignItems: 'center',
     paddingLeft: 24,
     paddingRight: 24
   },
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   logo: {
     width: 150,
     height: 150,
-    backgroundColor: '#f62745',
+    resizeMode: 'stretch'
   },
   logoContainer: {
     alignItems: 'center',
