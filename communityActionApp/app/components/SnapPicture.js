@@ -1,5 +1,5 @@
 var React = require('react-native');
-var Impact = require('./Impact');
+var AdditionalInfo = require('./AdditionalInfo');
 
 var {
     TouchableHighlight,
@@ -10,7 +10,20 @@ var {
 
 class SnapPicture extends React.Component{
     handleSubmit(event){
-      console.log(event);
+      var report = this.props.report;
+      report.picture = 0;
+
+      this.setState({
+        report: report
+      });
+      this.props.navigator.push({
+        title: 'Additional Info',
+        component: AdditionalInfo,
+        passProps: {report: this.state.report}
+      });
+      this.setState({
+        report: ''
+      });
     }
     render(){
         var layout = (
