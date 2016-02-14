@@ -1,5 +1,5 @@
 var React = require('react-native');
-var Success = require('Success');
+var Success = require('./Success');
 var api = require('../utils/api');
 
 var {
