@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
     fontSize: 14
   },
   emailInput: {
-    width: 190,
+    width: 252,
     height: 50,
     borderColor: 'gray',
     borderWidth: 1
@@ -219,6 +219,7 @@ const styles = StyleSheet.create({
     marginLeft: 24,
     marginRight: 24,
     paddingTop: 24,
+    height: 100
   },
   policeLabel: {
     marginTop: 16,
