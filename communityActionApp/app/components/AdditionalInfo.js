@@ -40,12 +40,27 @@ class AdditionalInfo extends React.Component{
             </View>
           </View>
           <View style={styles.row}>
-            <TextInput style={styles.locationNameInput} />
+            <View style={styles.locationContainer}>
+              <Text style={styles.locationNameLabel}>
+                Location Name
+              </Text>
+              <TextInput style={styles.locationNameInput} />
+            </View>
           </View>
           <View style={styles.row}>
-            <TextInput style={styles.locationAddressInput} />
+            <View style={styles.locationContainer}>
+              <Text style={styles.locationAddressLabel}>
+                Location Address
+              </Text>
+              <TextInput style={styles.locationAddressInput} />
+            </View>
           </View>
           <View style={styles.row}>
+            <View style={styles.policeContainer}>
+              <Text style={styles.policeLabel}>
+                Police Contacted
+              </Text>
+            </View>
             <TouchableHighlight
               underlayColor={'#B1B8B9'}
               style={styles.policeButton}
@@ -66,7 +81,12 @@ class AdditionalInfo extends React.Component{
             </TouchableHighlight>
           </View>
           <View style={styles.row}>
-            <TextInput style={styles.additionalNotesInput} />
+            <View style={styles.additionalNotesContainer}>
+              <Text style={styles.additionalNotesLabel}>
+                Additional Notes
+              </Text>
+              <TextInput style={styles.additionalNotesInput} />
+            </View>
           </View>
           <View style={styles.row}>
             <TouchableHighlight
@@ -89,7 +109,7 @@ class AdditionalInfo extends React.Component{
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 120,
+    paddingTop: 60,
   },
   row: {
     flex: 1,
@@ -124,17 +144,46 @@ const styles = StyleSheet.create({
     fontSize: 14
   },
   emailInput: {
-
     width: 206,
     height: 50,
     borderColor: 'gray',
     borderWidth: 1
   },
-  locationNameInput: {
+  locationContainer:{
 
   },
+  locationNameLabel: {
+    marginTop: 16,
+    marginBottom: 14,
+    fontWeight: 'bold',
+    fontSize: 14
+  },
+  locationNameInput: {
+    width: 320,
+    height: 50,
+    borderColor: 'gray',
+    borderWidth: 1
+  },
+  locationAddressLabel: {
+    marginTop: 16,
+    marginBottom: 14,
+    fontWeight: 'bold',
+    fontSize: 14
+  },
   locationAddressInput: {
+    width: 320,
+    height: 50,
+    borderColor: 'gray',
+    borderWidth: 1
+  },
+  policeContainer: {
 
+  },
+  policeLabel: {
+    marginTop: 16,
+    marginBottom: 14,
+    fontWeight: 'bold',
+    fontSize: 14
   },
   policeButton: {
     width: 100,
@@ -145,8 +194,17 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ffffff'
   },
+  additionalNotesLabel: {
+    marginTop: 16,
+    marginBottom: 14,
+    fontWeight: 'bold',
+    fontSize: 14
+  },
   additionalNotesInput: {
-
+    width: 320,
+    height: 50,
+    borderColor: 'gray',
+    borderWidth: 1
   },
   reportSubmitButton: {
     width: 320,
