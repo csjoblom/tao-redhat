@@ -11,16 +11,19 @@ var api = {
                 'report_time': Date.now(),
                 'lat': '',
                 'lng': '',
-                'type': 'disturbance',
+                'type': '',
                 'business_name': '',
                 'notes': '',
                 'images': '',
-                'police_contacted': ''
+                'police_contacted': '0'
             }
         })
         .then((response)=>response.text())
         .then((responseText)=>{
-            console.log(responseText);
+            this.props.navigator.push({
+            title: 'Success',
+            component: Success
+          });
         })
         .catch((error) => {
             console.warn(error);
