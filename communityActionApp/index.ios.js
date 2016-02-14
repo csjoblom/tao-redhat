@@ -18,7 +18,7 @@ class iHeartRedCaps extends Component {
       <NavigatorIOS
         style={styles.container}
         initialRoute={{
-          title:'Report an Issue',
+          title:'Issue Type',
           component: IssueType
         }}
       />

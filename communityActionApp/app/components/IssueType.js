@@ -2,6 +2,7 @@ var React = require('react-native');
 var Impact = require('./Impact');
 
 var {
+    Image,
     TouchableHighlight,
     Text,
     StyleSheet,
@@ -34,8 +35,9 @@ class IssueType extends React.Component{
         var layout = (
         <View style={styles.container}>
             <View style={styles.logoContainer}>
-              <View style={styles.logo}>
-              </View>
+              <Image style={styles.logo}
+                source={require('../assets/logo.png')}
+              />
             </View>
             <View style={styles.issueContainer}>
               <TouchableHighlight
@@ -159,6 +161,7 @@ const styles = StyleSheet.create({
     width: 150,
     height: 150,
     backgroundColor: '#f62745',
+    resizeMode: 'stretch'
   },
   logoContainer: {
     alignItems: 'center',
