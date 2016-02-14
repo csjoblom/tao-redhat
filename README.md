@@ -1,31 +1,25 @@
 # tao-redhat
 Community Notification Application
 
-Eugene Red Caps – Readme
+iHeartRedCaps – Readme
 
-	This project is one that will allow for real-time reporting, analytics, and information sharing across the organization that is the Eugene Red Caps. 
+	This project supports real-time issue reporting, in-depth analytics, and information sharing for the Downtown Guides aka ‘red caps’ of Eugene, Oregon. 
 
-
-The primary components to the project are: 
-the marketing site, the back end databases, and the app.
+The primary components of this project include: 
+-Marketing site
+-Back end databases
+-Mobile app
 
 	Marketing site:
-Allows for a more public front for community awareness	
-Provides pertinent information as to what the organization is as well as helpful resources for contacting partners and the organization members
-Showcases what the organization has accomplished and what their plans are for 	the future.
-Built in WordPress as the organization is familiar with this platform
+The public facing website prompt engagement and community awareness by prominently displaying pertinent information about the organization’s role within the community. The site is built on the WordPress platform which is familiar to the organization. The flexible design allows for and expanding to list of news, safety resources, community partners, and plans for the future.
+
 
 	Databases:
-Provides a secure location for storing reported incidents
-Stored data can be used for various analytics
+The back end MySQL databases provide a secure location for storing reports and their related details. Issues are categorized by type and severity, and include dimensions for date, time, geolocation, reporter, businesses affected, as well as notes, images, and information about whether or not police contact initiated. All of this stored data can be segmented for various analytics and reporting purposes.
 
 	WordPress Plugin:
-Provides REST API for App to Database connection
-API endpoints could be expanded for open data sharing
-Adds reporting page inside of the WordPRess Dashboard
+This fully custom PHP and MYSQL plugin provides REST API for the app-to-database connection. The specified API endpoints could be expanded to allow for open data sharing in the future. The plugin also adds a reporting page within the manager-level WordPress Dashboard to chart and visualize the data collected from app users in the field. 
 
 
 	Mobile App:
-Creates an effective tool for real-time reports
-Captures the most important information quickly and on site
-Open for the Red Caps and can be expanded for community use
+This is a realtime data reporting tool for users in the field. Effectively creates real-time reports to inform the database. Captures the most important information quickly on-site. Open for the Red Caps and can be expanded for community use.
