@@ -1,4 +1,4 @@
-package com.communityactionapp;
+package com.iheartredcaps;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactPackage;
@@ -15,7 +15,7 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "communityActionApp";
+        return "iHeartRedCaps";
     }
 
     /**
@@ -34,6 +34,7 @@ public class MainActivity extends ReactActivity {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-        new MainReactPackage());
+        new MainReactPackage()
+      );
     }
 }
