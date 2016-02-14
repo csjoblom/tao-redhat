@@ -63,7 +63,7 @@ function wp_red_caps_func( WP_REST_Request $request ){
 //get headers to look for a key
 $headers = array(getallheaders());
 
-$api_key = $headers[0]["Apikey"];
+$api_key = $headers[0]["apikey"];
 //api key from database
 $stored_api_key = get_option('wp_red_caps_key');
 
@@ -72,16 +72,16 @@ if ($api_key == $stored_api_key) {
 
 global $wpdb;
 
-  $issue_id = $headers[0]["Issue-Id"];
-  $reporter_id = $headers[0]["Reporter-Id"];
-  $report_time = $headers[0]["Report_Time"];
-  $lat = $headers[0]["Lat"];
-  $lng = $headers[0]["Lng"];
-  $type = $headers[0]["Type"];
-  $business_name = $headers[0]["Business_Name"];
-  $notes = $headers[0]["Notes"];
-  $images = $headers[0]["Images"];
-  $police_contacted = $headers[0]["Police_Contacted"];
+  $issue_id = $headers[0]["issue_id"];
+  $reporter_id = $headers[0]["reporter_id"];
+  $report_time = $headers[0]["report_time"];
+  $lat = $headers[0]["lat"];
+  $lng = $headers[0]["lng"];
+  $type = $headers[0]["type"];
+  $business_name = $headers[0]["business_name"];
+  $notes = $headers[0]["notes"];
+  $images = $headers[0]["images"];
+  $police_contacted = $headers[0]["police_pontacted"];
 
   $table_name = $wpdb->prefix . 'red_caps_data';
 
