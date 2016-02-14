@@ -30,6 +30,10 @@ class Failure extends React.Component{
         .catch((error) => {
             console.warn(error);
         });
+      this.setState({
+        report: ''
+      });
+    }
     render(){
         var layout = (
         <View style={styles.container}>
