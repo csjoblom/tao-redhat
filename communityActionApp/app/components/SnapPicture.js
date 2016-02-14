@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   issueType: {
     color: '#ffffff',
     textAlign: 'center',
-    fontSize: 11,
+    fontSize: 24,
     fontWeight: 'bold'
   },
   logo: {

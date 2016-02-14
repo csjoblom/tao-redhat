@@ -41,10 +41,10 @@ class IssueType extends React.Component{
               <TouchableHighlight
                 underlayColor={'#B1B8B9'}
                 style={styles.issueButton}
-                value={'wayfinding'}
+                value={'aid'}
                 onPress={this.handleSubmit.bind(this)}>
                 <Text style={styles.issueType}>
-                  Wayfinding
+                  Aid
                 </Text>
               </TouchableHighlight>
              <TouchableHighlight
@@ -59,19 +59,19 @@ class IssueType extends React.Component{
               <TouchableHighlight
                 underlayColor={'#B1B8B9'}
                 style={styles.issueButton}
-                value={'escort'}
+                value={'walkout'}
                 onPress={this.handleSubmit.bind(this)}>
                 <Text style={styles.issueType}>
-                  Escort
+                  Walk Out
                 </Text>
               </TouchableHighlight>
               <TouchableHighlight
                 underlayColor={'#B1B8B9'}
                 style={styles.issueButton}
-                value={'emergencyresponse'}
+                value={'vagrancy'}
                 onPress={this.handleSubmit.bind(this)}>
                 <Text style={styles.issueType}>
-                  Emergency Response
+                  Vagrancy
                 </Text>
               </TouchableHighlight>
               <TouchableHighlight
@@ -113,10 +113,10 @@ class IssueType extends React.Component{
               <TouchableHighlight
                 underlayColor={'#B1B8B9'}
                 style={styles.issueButton}
-                value={'aid'}
+                value={'graffiti'}
                 onPress={this.handleSubmit.bind(this)}>
                 <Text style={styles.issueType}>
-                  Aid
+                  Graffiti
                 </Text>
               </TouchableHighlight>
             </View>

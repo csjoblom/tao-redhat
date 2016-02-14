@@ -34,37 +34,82 @@ class Impact extends React.Component{
               <TouchableHighlight
                 underlayColor={'#B1B8B9'}
                 style={styles.impactButton}
-                value={'fight'}
+                value={'1'}
                 onPress={this.handleSubmit.bind(this)}>
                 <Text style={styles.issueType}>
-                  Fight
+                  1
                 </Text>
               </TouchableHighlight>
                <TouchableHighlight
                 underlayColor={'#B1B8B9'}
                 style={styles.impactButton}
-                value={'fight'}
+                value={'2'}
                 onPress={this.handleSubmit.bind(this)}>
                 <Text style={styles.issueType}>
-                  Fight
+                  2
                 </Text>
               </TouchableHighlight>
                <TouchableHighlight
                 underlayColor={'#B1B8B9'}
                 style={styles.impactButton}
-                value={'fight'}
+                value={'3'}
                 onPress={this.handleSubmit.bind(this)}>
                 <Text style={styles.issueType}>
-                  Fight
+                  3
                 </Text>
               </TouchableHighlight>
                <TouchableHighlight
                 underlayColor={'#B1B8B9'}
                 style={styles.impactButton}
-                value={'fight'}
+                value={'4'}
                 onPress={this.handleSubmit.bind(this)}>
                 <Text style={styles.issueType}>
-                  Fight
+                  4
+                </Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={'#B1B8B9'}
+                style={styles.impactButton}
+                value={'5'}
+                onPress={this.handleSubmit.bind(this)}>
+                <Text style={styles.issueType}>
+                  5
+                </Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={'#B1B8B9'}
+                style={styles.impactButton}
+                value={'6'}
+                onPress={this.handleSubmit.bind(this)}>
+                <Text style={styles.issueType}>
+                  6
+                </Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={'#B1B8B9'}
+                style={styles.impactButton}
+                value={'7'}
+                onPress={this.handleSubmit.bind(this)}>
+                <Text style={styles.issueType}>
+                  7
+                </Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={'#B1B8B9'}
+                style={styles.impactButton}
+                value={'8'}
+                onPress={this.handleSubmit.bind(this)}>
+                <Text style={styles.issueType}>
+                  8
+                </Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={'#B1B8B9'}
+                style={styles.impactButton}
+                value={'9'}
+                onPress={this.handleSubmit.bind(this)}>
+                <Text style={styles.issueType}>
+                  9
                 </Text>
               </TouchableHighlight>
             </View>
@@ -89,8 +134,8 @@ const styles = StyleSheet.create({
     paddingRight: 24
   },
   impactButton: {
-    width: 124,
-    height: 124,
+    width: 100,
+    height: 100,
     justifyContent: 'center',
     backgroundColor: '#f62745',
     padding: 16,
@@ -100,7 +145,7 @@ const styles = StyleSheet.create({
   issueType: {
     color: '#ffffff',
     textAlign: 'center',
-    fontSize: 16,
+    fontSize: 24,
     fontWeight: 'bold'
   }
 });
