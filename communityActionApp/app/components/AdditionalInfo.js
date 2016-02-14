@@ -3,6 +3,7 @@ var Success = require('./Success');
 var api = require('../utils/api');
 
 var {
+    ScrollView,
     TouchableHighlight,
     Text,
     TextInput,
@@ -37,18 +38,9 @@ class AdditionalInfo extends React.Component{
     }
     render(){
         var layout = (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
           <View style={styles.row}>
           <View style={styles.issueContainer}>
-              <TouchableHighlight
-                underlayColor={'#B1B8B9'}
-                style={styles.issueButton}
-                value={'aid'}
-                onPress={this.handleSubmit.bind(this)}>
-                <Text style={styles.issueType}>
-                  Aid
-                </Text>
-              </TouchableHighlight>
               <View style={styles.emailContainer}>
                 <Text style={styles.emailLabel}>
                 Email
@@ -82,8 +74,7 @@ class AdditionalInfo extends React.Component{
             <TouchableHighlight
               underlayColor={'#B1B8B9'}
               style={styles.policeButton}
-              value={false}
-              onPress={this.handleSubmit.bind(this)}>
+              value={false}>
               <Text style={styles.issueType}>
                 No
               </Text>
@@ -91,8 +82,7 @@ class AdditionalInfo extends React.Component{
             <TouchableHighlight
               underlayColor={'#B1B8B9'}
               style={styles.policeButton}
-              value={true}
-              onPress={this.handleSubmit.bind(this)}>
+              value={true}>
               <Text style={styles.issueType}>
                 Yes
               </Text>
@@ -103,7 +93,9 @@ class AdditionalInfo extends React.Component{
               <Text style={styles.additionalNotesLabel}>
                 Additional Notes
               </Text>
-              <TextInput style={styles.additionalNotesInput} />
+              <TextInput
+                style={styles.additionalNotesInput}
+                multiline={true}/>
             </View>
           </View>
           <View style={styles.row}>
@@ -120,7 +112,7 @@ class AdditionalInfo extends React.Component{
             </View>
           </View>
 
-        </View>
+        </ScrollView>
         );
         return layout;
     }
@@ -128,8 +120,7 @@ class AdditionalInfo extends React.Component{
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    paddingTop: 60,
+    flex: 1
   },
   row: {
     flex: 1,
@@ -164,7 +155,13 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   emailContainer: {
-    marginLeft: 16
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    marginLeft: 24,
+    marginRight: 24,
+    paddingTop: 24,
   },
   emailLabel: {
     marginTop: 16,
@@ -173,7 +170,7 @@ const styles = StyleSheet.create({
     fontSize: 14
   },
   emailInput: {
-    width: 252,
+    width: 320,
     height: 50,
     borderColor: 'gray',
     borderWidth: 1
