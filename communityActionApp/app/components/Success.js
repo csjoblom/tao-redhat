@@ -1,4 +1,5 @@
 var React = require('react-native');
+var IssueType = require('./IssueType');
 
 
 var {
@@ -8,9 +9,9 @@ var {
     View
 } = React;
 
-class SnapPicture extends React.Component{
+class Success extends React.Component{
     handleSubmit(event){
-     console.log('game over');
+     this.props.navigator.popToTop();
     }
     render(){
         var layout = (
@@ -78,4 +79,4 @@ const styles = StyleSheet.create({
 });
 
 
-module.exports = SnapPicture;
+module.exports = Success;
