@@ -22,7 +22,7 @@ class IssueType extends React.Component{
         }
       });
       this.props.navigator.push({
-        title: 'Impact',
+        title: 'Severity',
         component: Impact,
         passProps: {report: this.state.report}
       });
