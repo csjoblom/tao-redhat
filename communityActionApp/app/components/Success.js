@@ -1,5 +1,5 @@
 var React = require('react-native');
-var Success = require('./IssueType');
+
 
 var {
     TouchableHighlight,
@@ -10,20 +10,7 @@ var {
 
 class SnapPicture extends React.Component{
     handleSubmit(event){
-      var report = this.props.report;
-      report.picture = 0;
-
-      this.setState({
-        report: report
-      });
-      this.props.navigator.push({
-        title: 'Report an Issue',
-        component: IssueType,
-        passProps: {report: this.state.report}
-      });
-      this.setState({
-        report: ''
-      });
+     console.log('game over');
     }
     render(){
         var layout = (

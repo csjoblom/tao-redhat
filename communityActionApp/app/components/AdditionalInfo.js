@@ -17,7 +17,20 @@ class AdditionalInfo extends React.Component{
       this.setState({
         report: report
       });
-      console.log(api.postReport(this.state.report));
+      var apiReq = api.postReport(this.state.report);
+      apiReq
+        .then((response)=>response.text())
+        .then((responseText)=>{
+            console.log(responseText);
+            this.props.navigator.push({
+            title: 'Successful Submission',
+            component: Success,
+            passProps: {report: this.state.report}
+      });
+        })
+        .catch((error) => {
+            console.warn(error);
+        });
       this.setState({
         report: ''
       });
