@@ -42,7 +42,12 @@
 			<div class="slides">
 				<section>
 					<h1>I <img id="heart" src="img/heart.png" /> Red Caps</h1>
-					<h3>DWN<br>TWN<br>EUG</h3>
+					<img id="heart" src="img/guideslogo124.jpg" />
+				</section>
+
+				<section>
+					<h2>Follow Along:</h2>
+					<a href="http://goo.gl/ca9C4Y">http://goo.gl/ca9C4Y</a>
 				</section>
 
 				<section data-transition="zoom">
@@ -70,32 +75,71 @@
 				</section>
 
 				<section>
-					<h2>Technologies Used</h2>
-					<p class="fragment grow">React Native</p>
-					<p class="fragment grow">WordPress API</p>
-					<p class="fragment grow">Amazon Web Services</p>
+					<h2>Issue Reporting</h2>
+					<p class="fragment fade">Issues are categorized by type and severity, and include dimensions for date, time, geolocation, reporter, businesses affected, as well as notes, images, and information about whether or not police contact initiated. All of this stored data can be segmented for various analytics and reporting purposes.</p>
 				</section>
 
 				<section>
-					<h2>Infrastructure</h2>
-					<p class="fragment grow">We wanted to be able to just hand over they keys at the end of the day, so we needed to set up an AWS account just for the Red Caps. That also meant having an email address with which to register and use for the past 40-something hours. Then AWS, despite the fact that our offering will run in the free tier, required a credit card. Again, wanting to be able to just turn everything over, we put a Visa gift card on the account.</p>
-					<p class="fragment">While the team built a system that is easily portable, being built on the back of Wordpress, we still wanted to offer a robust system. We have therefore built the system on Amazon Web Services - this is a cloud native solution.</p>
-					<p class="fragment grow">We're turning over the following assets to the Red Caps:<p>​
-						<li class="fragment">- The i.heart.red.caps@gmail.com email address</li>
-						<li class="fragment">- An AWS account registered under that email address</li>
-						<li class="fragment">- A $20 gift card</li>
-					<p class="fragment grow">This setup should run without further cost for at least a year. At which point it should cost approximately $10/month, but could be reduced to $50/year with the pre-purchase of resources.</p>
+					<h2>Marketing Site</h2>
+					<p class="fragment fade">The public facing website prompts engagement and community awareness by prominently displaying pertinent information about the organization’s role within the community. The site is built on the WordPress platform which is familiar to the organization. The flexible design allows for and expanding to list of news, safety resources, community partners, and plans for the future.</p>
 				</section>
 
 				<section>
-					<h2>Technologies Used</h2>
-					<p class="fragment grow">React Native</p>
-					<p class="fragment grow">WordPress API</p>
-					<p class="fragment grow">Amazon Web Services</p>
+					<h2>Databases</h2>
+					<p class="fragment fade">The back end MySQL databases provide a secure location for storing reports and their related details.</p>
 				</section>
 
 				<section>
-					<h2>Live Demo!</h2>
+					<h2>WordPress Plugin</h2>
+					<p class="fragment fade">This fully custom PHP and MYSQL plugin provides REST API for the app-to-database connection. The specified API endpoints could be expanded to allow for open data sharing in the future. The plugin also adds a reporting page within the manager-level WordPress Dashboard to chart and visualize the data collected from app users in the field.</p>
+				</section>
+
+				<section>
+					<h2>Mobile App</h2>
+					<p class="fragment fade">This is a realtime data reporting tool for users in the field. Effectively creates real-time reports to inform the database. Captures the most important information quickly on-site. Open for the Red Caps and can be expanded for community use.</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Infrastructure</h2>
+						<p class="fragment">While the team built a system that is easily portable, being built on the back of Wordpress, we still wanted to offer a robust system. We have therefore built the system on Amazon Web Services - this is a cloud native solution.</p>
+					</section>
+					<section>
+						<p>We wanted to be able to just hand over they keys at the end of the day, so we needed to set up an AWS account just for the Red Caps. That also meant having an email address with which to register and use for the past 40-something hours. Then AWS, despite the fact that our offering will run in the free tier, required a credit card. Again, wanting to be able to just turn everything over, we put a Visa gift card on the account.</p>
+					</section>
+					<section>
+						<p>We're turning over the following assets to the Red Caps:<p>​
+							<ul>
+								<li class="fragment fade">The i.heart.red.caps@gmail.com email address</li>
+								<li class="fragment fade">An AWS account registered under that email address</li>
+								<li class="fragment fade">A $20 gift card</li>
+							</ul>
+						<p class="fragment fade">This setup should run without further cost for at least a year. At which point it should cost approximately $10/month, but could be reduced to $50/year with the pre-purchase of resources.</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>C.A.R.D.S.</h2>
+					</section>
+					<section>
+						<h3>Capacity</h3>
+						<p class="fragment fade">As an educated guess, and barring bad actors, they should have ample Capacity for the foreseeable future. The AWS server runs WordPress, the API that ties the app to WordPress, and the Disaster Recovery systems.</p>
+					</section>
+					<section>
+						<h3>Availability &amp; Redudancy</h3>
+						<p class="fragment fade">At this scale, Availability and Redundancy are effectively the same, which is to say, there's little capacity for either without significant increases in running costs. For the most part we're reliant on Disaster Recovery but the entire system, as delivered, has been baked into a Machine Image (AMI). So if the server shuts down, it can be restored to today’s state in a matter of minutes.</p>
+					</section>
+					<section>
+						<h3>Disaster Recovery</h3>
+						<p class="fragment fade">Data can never be recreated so we went the extra mile in terms of Disaster Recovery. There are two levels of backups happening. First we do a full dump of the MySQL database containing all the data (incidents and Wordpress) on a daily basis. Additionally, I put a system in place that creates a clone of the server's hard drive every day.</p>
+						<p class="fragment fade">The MySQL backups are are kept via S3 versioning for 30 days, put in a cheaper but less redundant storage system for 60 days, then finally deleted after a total of 90 days to save total running costs</p>
+					</section>
+				</section>
+
+				<section>
+					<p>iHeart Red Caps Mobile Apps</p>
+					<h2 class="fragment fade">Live Demo!</h2>
 				</section>
 
 			</div>
