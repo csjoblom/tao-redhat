@@ -153,12 +153,11 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   impactHeader: {
-    paddingBottom: 100,
+    paddingBottom: 50,
     alignItems: 'center'
   },
   impactHeaderType: {
-    fontSize: 24,
-    fontWeight: 'bold'
+    fontSize: 48,
   }
 });
 
