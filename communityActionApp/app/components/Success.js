@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
   },
   successType: {
     fontSize: 48,
+    textAlign: 'center'
   },
   successButton: {
     width: 320,
