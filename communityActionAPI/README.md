@@ -20,18 +20,30 @@ Endpoints:
 API header keys:
 
 apikey - String. found in options page of plugin.
-id - INTEGER(10) UNSIGNED AUTO_INCREMENT,*
-issue_id - INTEGER(10),*
-reporter_id - INTEGER(10),*
-date - TIMESTAMP DEFAULT CURRENT_TIMESTAMP,*
-report_time - TIMESTAMP,*
-lat - DECIMAL(18,12),*
-lng - DECIMAL(18,12),*
-type - VARCHAR(255),*
-business_name - VARCHAR(255),*
-notes - VARCHAR(255),*
-images - VARCHAR(255),*
-police_contacted - BOOLEAN*
+id - INTEGER(10) UNSIGNED AUTO_INCREMENT,
+
+issue_id - INTEGER(10),
+
+reporter_id - INTEGER(10),
+
+date - TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+report_time - TIMESTAMP,
+
+lat - DECIMAL(18,12),
+
+lng - DECIMAL(18,12),
+
+type - VARCHAR(255),
+
+business_name - VARCHAR(255),
+
+notes - VARCHAR(255),
+
+images - VARCHAR(255),
+
+police_contacted - BOOLEAN
+
 
 
 
