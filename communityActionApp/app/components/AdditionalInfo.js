@@ -126,6 +126,8 @@ class AdditionalInfo extends React.Component{
 
 const styles = StyleSheet.create({
   container: {
+    marginLeft: 24,
+    marginRight: 24,
     flex: 1
   },
   row: {
@@ -133,17 +135,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'center',
-    marginLeft: 24,
-    marginRight: 24,
-    paddingTop: 24,
+    paddingTop: 16,
   },
   issueContainer: {
     flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'center',
-    marginLeft: 24,
-    marginRight: 24,
     paddingTop: 24,
   },
   issueButton: {
@@ -165,8 +163,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'center',
-    marginLeft: 24,
-    marginRight: 24,
     paddingTop: 24,
   },
   emailLabel: {
@@ -186,8 +182,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'center',
-    marginLeft: 24,
-    marginRight: 24,
     paddingTop: 24,
   },
   locationNameLabel: {
@@ -219,8 +213,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'center',
-    marginLeft: 24,
-    marginRight: 24,
     paddingTop: 24,
     height: 100
   },
@@ -244,8 +236,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'center',
-    marginLeft: 24,
-    marginRight: 24,
     paddingTop: 24,
   },
   additionalNotesLabel: {
@@ -265,8 +255,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignItems: 'center',
-    marginLeft: 24,
-    marginRight: 24,
     paddingTop: 24,
   },
   reportSubmitButton: {

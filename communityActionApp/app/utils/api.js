@@ -7,12 +7,13 @@ var api = {
             headers: {
                 'apikey': apiKey,
                 'issue_id': '',
-                'reporter_id': '',
+                'reporter_id': '3',
                 'report_time': Date.now(),
+                'impact': '4',
                 'lat': '',
                 'lng': '',
-                'type': '',
-                'business_name': '',
+                'type': 'vagrancy',
+                'business_name': 'Sizzle Pie',
                 'notes': '',
                 'images': '',
                 'police_contacted': '0'
