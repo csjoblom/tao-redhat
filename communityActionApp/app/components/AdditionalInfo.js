@@ -1,5 +1,6 @@
 var React = require('react-native');
 var Success = require('./Success');
+var Failure = require('./Failure');
 var api = require('../utils/api');
 
 var {
@@ -24,13 +25,18 @@ class AdditionalInfo extends React.Component{
         .then((responseText)=>{
             console.log(responseText);
             this.props.navigator.push({
-            title: 'Successful Submission',
+            title: 'Success',
             component: Success,
             passProps: {report: this.state.report}
       });
         })
         .catch((error) => {
             console.warn(error);
+            this.props.navigator.push({
+            title: 'Failure',
+            component: Failure,
+            passProps: {report: this.state.report}
+      });
         });
       this.setState({
         report: ''
