@@ -107,7 +107,7 @@ class IssueType extends React.Component{
                 value={'disturbance'}
                 onPress={this.handleSubmit.bind(this)}>
                 <Text style={styles.issueType}>
-                  Disturb
+                  Richard
                 </Text>
               </TouchableHighlight>
               <TouchableHighlight

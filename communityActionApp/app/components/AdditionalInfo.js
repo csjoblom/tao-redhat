@@ -1,4 +1,5 @@
 var React = require('react-native');
+var api = require('../utils/api');
 
 var {
     TouchableHighlight,
@@ -15,6 +16,7 @@ class AdditionalInfo extends React.Component{
       this.setState({
         report: report
       });
+      api.postReport(this.state.report);
       this.setState({
         report: ''
       });
@@ -202,7 +204,7 @@ const styles = StyleSheet.create({
   },
   additionalNotesInput: {
     width: 320,
-    height: 50,
+    height: 250,
     borderColor: 'gray',
     borderWidth: 1
   },
