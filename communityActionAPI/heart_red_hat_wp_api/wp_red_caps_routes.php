@@ -81,7 +81,7 @@ global $wpdb;
   $business_name = $headers[0]["business_name"];
   $notes = $headers[0]["notes"];
   $images = $headers[0]["images"];
-  $police_contacted = $headers[0]["police_pontacted"];
+  $police_contacted = $headers[0]["police_contacted"];
 
   $table_name = $wpdb->prefix . 'red_caps_data';
 
