@@ -1,43 +1,76 @@
 var React = require('react-native');
 
 var {
-    View,
+    TouchableHighlight,
     Text,
-    StyleSheet
+    StyleSheet,
+    View
 } = React;
 
 class IssueType extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            report: ''
+        };
+    }
+    handleSubmit(event){
+        console.log(this);
+        console.log(event);
+        //create a new report with selected issue type
+        //reroute to next screen
+    }
     render(){
         var layout = (
         <View style={styles.container}>
-          <Text style={styles.issueType}>
-            Issue Type #1
-          </Text>
-          <Text style={styles.issueType}>
-            Issue Type #1
-          </Text>
-          <Text style={styles.issueType}>
-            Issue Type #1
-          </Text>
-          <Text style={styles.issueType}>
-            Issue Type #1
-          </Text>
-          <Text style={styles.issueType}>
-            Issue Type #1
-          </Text>
-          <Text style={styles.issueType}>
-            Issue Type #1
-          </Text>
-          <Text style={styles.issueType}>
-            Issue Type #1
-          </Text>
-          <Text style={styles.issueType}>
-            Issue Type #1
-          </Text>
-          <Text style={styles.issueType}>
-            Issue Type #1
-          </Text>
-
+            <TouchableHighlight
+                style={styles.issueContainer}
+                value={'fight'}
+                onPress={this.handleSubmit.bind(this)}>
+              <Text style={styles.issueType}>
+                Fight
+              </Text>
+            </TouchableHighlight>
+            <TouchableHighlight style={styles.issueContainer}>
+              <Text style={styles.issueType}>
+                Fight
+              </Text>
+            </TouchableHighlight>
+            <TouchableHighlight style={styles.issueContainer}>
+              <Text style={styles.issueType}>
+                Fight
+              </Text>
+            </TouchableHighlight>
+            <TouchableHighlight style={styles.issueContainer}>
+              <Text style={styles.issueType}>
+                Fight
+              </Text>
+            </TouchableHighlight>
+            <TouchableHighlight style={styles.issueContainer}>
+              <Text style={styles.issueType}>
+                Fight
+              </Text>
+            </TouchableHighlight>
+            <TouchableHighlight style={styles.issueContainer}>
+              <Text style={styles.issueType}>
+                Fight
+              </Text>
+            </TouchableHighlight>
+            <TouchableHighlight style={styles.issueContainer}>
+              <Text style={styles.issueType}>
+                Fight
+              </Text>
+            </TouchableHighlight>
+            <TouchableHighlight style={styles.issueContainer}>
+              <Text style={styles.issueType}>
+                Fight
+              </Text>
+            </TouchableHighlight>
+            <TouchableHighlight style={styles.issueContainer}>
+              <Text style={styles.issueType}>
+                Fight
+              </Text>
+            </TouchableHighlight>
         </View>
         );
         return layout;
@@ -53,19 +86,23 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
     paddingTop: 150,
-    paddingLeft: 45,
-    paddingRight: 45
+    paddingLeft: 24,
+    paddingRight: 24
   },
-  issueType: {
+  issueContainer: {
     width: 80,
     height: 80,
+    justifyContent: 'center',
     backgroundColor: '#f62745',
-    color: '#ffffff',
-    padding: 10,
+    padding: 16,
     marginTop: 10,
     marginRight: 10,
+    borderRadius: 5
+  },
+  issueType: {
+    color: '#ffffff',
     textAlign: 'center',
-    justifyContent: 'center'
+    fontWeight: 'bold'
   }
 });
 
