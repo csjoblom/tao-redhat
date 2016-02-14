@@ -17,7 +17,7 @@ class AdditionalInfo extends React.Component{
       this.setState({
         report: report
       });
-      api.postReport(this.state.report);
+      console.log(api.postReport(this.state.report));
       this.setState({
         report: ''
       });
