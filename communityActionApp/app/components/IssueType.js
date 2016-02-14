@@ -1,4 +1,5 @@
 var React = require('react-native');
+var Impact = require('./Impact');
 
 var {
     TouchableHighlight,
@@ -15,62 +16,110 @@ class IssueType extends React.Component{
         };
     }
     handleSubmit(event){
-        console.log(this);
-        console.log(event);
-        //create a new report with selected issue type
-        //reroute to next screen
+      this.setState({
+        report: {
+          issuetype: 'fight'
+        }
+      });
+      this.props.navigator.push({
+        title: 'Impact',
+        component: Impact,
+        passProps: {report: this.state.report}
+      });
+      this.setState({
+        report: ''
+      });
     }
     render(){
         var layout = (
         <View style={styles.container}>
-            <TouchableHighlight
-                style={styles.issueContainer}
-                value={'fight'}
+            <View style={styles.logoContainer}>
+              <View style={styles.logo}>
+              </View>
+            </View>
+            <View style={styles.issueContainer}>
+              <TouchableHighlight
+                underlayColor={'#B1B8B9'}
+                style={styles.issueButton}
+                value={'wayfinding'}
                 onPress={this.handleSubmit.bind(this)}>
-              <Text style={styles.issueType}>
-                Fight
-              </Text>
-            </TouchableHighlight>
-            <TouchableHighlight style={styles.issueContainer}>
-              <Text style={styles.issueType}>
-                Fight
-              </Text>
-            </TouchableHighlight>
-            <TouchableHighlight style={styles.issueContainer}>
-              <Text style={styles.issueType}>
-                Fight
-              </Text>
-            </TouchableHighlight>
-            <TouchableHighlight style={styles.issueContainer}>
-              <Text style={styles.issueType}>
-                Fight
-              </Text>
-            </TouchableHighlight>
-            <TouchableHighlight style={styles.issueContainer}>
-              <Text style={styles.issueType}>
-                Fight
-              </Text>
-            </TouchableHighlight>
-            <TouchableHighlight style={styles.issueContainer}>
-              <Text style={styles.issueType}>
-                Fight
-              </Text>
-            </TouchableHighlight>
-            <TouchableHighlight style={styles.issueContainer}>
-              <Text style={styles.issueType}>
-                Fight
-              </Text>
-            </TouchableHighlight>
-            <TouchableHighlight style={styles.issueContainer}>
-              <Text style={styles.issueType}>
-                Fight
-              </Text>
-            </TouchableHighlight>
-            <TouchableHighlight style={styles.issueContainer}>
-              <Text style={styles.issueType}>
-                Fight
-              </Text>
-            </TouchableHighlight>
+                <Text style={styles.issueType}>
+                  Wayfinding
+                </Text>
+              </TouchableHighlight>
+             <TouchableHighlight
+                underlayColor={'#B1B8B9'}
+                style={styles.issueButton}
+                value={'meetgreet'}
+                onPress={this.handleSubmit.bind(this)}>
+                <Text style={styles.issueType}>
+                 Meet{'\n'}&{'\n'}Greet
+                </Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={'#B1B8B9'}
+                style={styles.issueButton}
+                value={'escort'}
+                onPress={this.handleSubmit.bind(this)}>
+                <Text style={styles.issueType}>
+                  Escort
+                </Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={'#B1B8B9'}
+                style={styles.issueButton}
+                value={'emergencyresponse'}
+                onPress={this.handleSubmit.bind(this)}>
+                <Text style={styles.issueType}>
+                  Emergency Response
+                </Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={'#B1B8B9'}
+                style={styles.issueButton}
+                value={'vandalism'}
+                onPress={this.handleSubmit.bind(this)}>
+                <Text style={styles.issueType}>
+                  Vandalism
+                </Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={'#B1B8B9'}
+                style={styles.issueButton}
+                value={'unlock'}
+                onPress={this.handleSubmit.bind(this)}>
+                <Text style={styles.issueType}>
+                  Unlock
+                </Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={'#B1B8B9'}
+                style={styles.issueButton}
+                value={'securitycheck'}
+                onPress={this.handleSubmit.bind(this)}>
+                <Text style={styles.issueType}>
+                  Security Check
+                </Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={'#B1B8B9'}
+                style={styles.issueButton}
+                value={'disturbance'}
+                onPress={this.handleSubmit.bind(this)}>
+                <Text style={styles.issueType}>
+                  Disturb
+                </Text>
+              </TouchableHighlight>
+              <TouchableHighlight
+                underlayColor={'#B1B8B9'}
+                style={styles.issueButton}
+                value={'aid'}
+                onPress={this.handleSubmit.bind(this)}>
+                <Text style={styles.issueType}>
+                  Aid
+                </Text>
+              </TouchableHighlight>
+            </View>
         </View>
         );
         return layout;
@@ -80,29 +129,40 @@ class IssueType extends React.Component{
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 120,
+  },
+  issueContainer: {
+    flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-    paddingTop: 150,
     paddingLeft: 24,
     paddingRight: 24
   },
-  issueContainer: {
-    width: 80,
-    height: 80,
+  issueButton: {
+    width: 100,
+    height: 100,
     justifyContent: 'center',
     backgroundColor: '#f62745',
     padding: 16,
-    marginTop: 10,
-    marginRight: 10,
-    borderRadius: 5
+    borderWidth: 1,
+    borderColor: '#ffffff'
   },
   issueType: {
     color: '#ffffff',
     textAlign: 'center',
+    fontSize: 11,
     fontWeight: 'bold'
+  },
+  logo: {
+    width: 150,
+    height: 150,
+    backgroundColor: '#f62745',
+  },
+  logoContainer: {
+    alignItems: 'center',
+    paddingBottom: 40
   }
 });
 
