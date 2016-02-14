@@ -18,7 +18,7 @@ class SnapPicture extends React.Component{
           <View style={styles.successContainer}>
             <View style={styles.successHeader}>
               <Text style={styles.successType}>
-                Report{\n}Submitted{\n}Successfully
+                Report{'\n'}Submitted{'\n'}Successfully
               </Text>
             </View>
             <TouchableHighlight
