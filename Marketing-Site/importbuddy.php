@@ -25,7 +25,7 @@ $wp_version = '4.4'; // Spoof a version for new wp-db class.
 $abspath = rtrim( dirname( __FILE__ ), '\\/' ) . '/';
 define( 'ABSPATH', $abspath );
 define( 'WP_CONTENT_DIR', $abspath . 'wp-content' );
-define( 'PB_BB_VERSION', '7.0.3.0 (downloaded 2016-02-14T10:27:22+00:00)' );
+define( 'PB_BB_VERSION', '7.0.3.0 (downloaded 2016-02-16T03:48:32+00:00)' );
 define( 'PB_PASSWORD', 'daf82b81a927c969afe4a83fbab844c8' );
 
 // Used by wpdb class.
