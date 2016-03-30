@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: I 💖 Red caps
+Plugin Name: I ðŸ’– Red caps
 Plugin URI: http://antonioortegajr.com
 Description: This plugin creates a custom REST API Endpoints for I Heart Red caps
 Version: 0.0.1
@@ -32,10 +32,20 @@ $sql = 'CREATE TABLE IF NOT EXISTS ' . $table_name . '(
   images VARCHAR(255),
   police_contacted BOOLEAN,
   PRIMARY KEY (id) )';
-
+$sql2 = 'CREATE TABLE IF NOT EXISTS `wp_red_caps_users` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) COLLATE utf8_bin NOT NULL,
+  `phone` varchar(255) COLLATE utf8_bin NOT NULL,
+  `firstName` varchar(255) COLLATE utf8_bin NOT NULL,
+  `lastName` varchar(255) COLLATE utf8_bin NOT NULL,
+  `groupName` varchar(255) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`,`phone`),
+  KEY `email_2` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;';
 require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 dbDelta( $sql );
-
+dbDelta( $sql2 );
 }
 
 
